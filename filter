@@ -1,0 +1,109 @@
+// Filter
+
+// In normal method
+
+const companies=[
+  {
+    name:"apple" ,category:"mobile" ,start:1981 ,end:1999
+    
+  },
+  {
+    name:"google" ,category:"tech" ,start:1985,end:1999
+    
+  },
+  {
+    name:"amazon" ,category:"tech" ,start:1999,end:2010
+    
+  },
+  {
+    name:"dell" ,category:"computer" ,start:2000,end:2010
+    
+  },
+  {
+    name:"intel" ,category:"hardware" ,start:1982,end:2000
+    
+  },
+  
+  ]
+  
+  
+  //NORMAL METHOD
+  startin20s=[]
+  for(let i=0;i<companies.length;i++)
+  {
+    if(companies[i].start>1000)
+    {
+      startin20s.push(companies[i].name);
+    }
+  }
+  
+  console.log(startin20s)
+  
+  
+  
+/////////////////////
+//by using foreach and filter
+const companyname=companies.filter(
+  function (company){
+    if(company.category=="tech")
+    {
+      return true;
+      
+    }
+  }
+  )
+console.log(companyname) //to print the filter value
+
+  companyname.forEach(
+    function (name)
+  {
+    
+    console.log(name.name)
+    console.log(name.category)
+    console.log(name.start) // to print the values insind the array
+    
+  }
+  )
+/////////////////////////////////////
+  
+// IN ARROW FUNCTION
+const companynames=companies.filter(companies=> companies.start==2000)
+
+console.log(companynames)  
+  
+  
+  
+  
+  
+//Make some operations in the functions
+
+const last10years=companies.filter(
+  company=>(company.end-company.start >10))
+  
+  console.log(last10years)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
