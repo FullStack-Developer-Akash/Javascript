@@ -1,0 +1,77 @@
+  
+//  setTimeout(function() {}, 10);
+
+
+const posts=[
+  {
+    title:"post 1",
+    body:"this is post 1"
+  },
+  {
+    title:"post 2",
+    body:"this is post 2"
+  }
+  
+  
+  
+  ];
+  
+  //console.log(post)
+  
+  
+  
+  
+  function getpost()
+  {
+    setTimeout(()=>{
+      posts.forEach(function(posts)
+      {
+        console.log(posts.title)
+        console.log(posts.body)
+        
+      }
+        )
+      
+    }, 2000);
+  }
+  
+  
+  
+  
+  
+  
+  function createpost(post,callback){ // callback is the getpostfunction 
+    setTimeout (()=>{
+      
+       posts.push(post)
+       callback(); // getpost fun is called after pushing the post
+    },2000);
+    
+   
+  }
+  
+  createpost({
+    title:"post3",
+    body:"this s post 3"
+  },getpost); 
+  //calling the getpost inside createpost
+  // so that after the create post call and inserting the
+  // new post the callback which is the getpost function
+  // is called 
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
