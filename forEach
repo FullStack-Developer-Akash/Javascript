@@ -1,0 +1,58 @@
+const companies=[
+  {
+    name:"apple" ,category:"mobile" ,start:"1981"
+    
+  },
+  {
+    name:"google" ,category:"tech" ,start:"1985"
+    
+  },
+  {
+    name:"amazon" ,category:"tech" ,start:"1999"
+    
+  },
+  {
+    name:"dell" ,category:"computer" ,start:"2000"
+    
+  },
+  {
+    name:"intel" ,category:"hardware" ,start:"1982"
+    
+  },
+  
+  ]
+  
+  
+  const ages=[20,25,12,26,13]
+  
+  
+  
+  // console.log(companies)
+  //   console.log(ages)
+  
+  
+ // for each
+  companies.forEach(
+    function (company,index,companies)
+  {
+    console.log(company.name,company.category)
+    console.log(index)
+    console.log(companies)
+  });
+  
+  
+  
+  // ages.forEach(
+  //   function (ages)
+  //   {
+  //     console.log(ages)
+  //   }
+  //   )
+  
+  
+
+  
+  
+  
+  
+  
